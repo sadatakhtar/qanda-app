@@ -10,13 +10,12 @@ function App() {
     <Router>
         <div className="App">
           <Header />
-
-          <Footer />
           <Switch>
             <Route path="/pages/SignUp" component={SignUp} />
      
             
           </Switch>
+          <Footer />
         </div>
 
     </Router>

@@ -1,13 +1,13 @@
 import React from 'react';
-import './SignUp.css';
-import Footer from '../../components/Footer';
+import SignupComponent from '../../components/SignupComponent';
+
+
 
 
 function SignUp() {
     return (
         <div className="signup_container">
-           <h1>body</h1>
-           <Footer />
+          <SignupComponent />
             
         </div>
     )

@@ -1,7 +1,7 @@
 .sidebar_container{
-    border: 1px solid black;
-    width: 22%;
-    height: 75vh;
+    border: 1px solid #f6f3f3;
+    width: 100%;
+    height: 79vh;
     display: flex;
     flex-direction: column;
     padding-top: 1.5rem;
@@ -19,16 +19,13 @@ hr {
 .sidebar_avatar > h3 {
     font-size: 0.8rem;
     margin-bottom: -0.8rem;
-    font-weight: 300;
-    
-   
+    font-weight: 300; 
 }
 
 .sidebar_avatar > h4 {
     font-size: 0.6rem;
     margin-bottom: 0px;
-    font-weight: 300;
-    
+    font-weight: 300;   
 }
 
 .sidebar_links > p {

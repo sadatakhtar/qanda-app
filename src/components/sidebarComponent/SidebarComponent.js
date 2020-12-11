@@ -17,7 +17,7 @@ function SidebarComponent() {
                 <p>empty links</p>
                 <p>empty links</p>
                 <p>empty links</p>
-                <p>empty links</p>
+                
             </div>
             
         </div>

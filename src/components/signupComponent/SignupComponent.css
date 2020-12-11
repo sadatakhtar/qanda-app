@@ -10,6 +10,7 @@
 }
 .signup_title > h2 {
     font-weight: 500;
+    margin-bottom: -80px;
    
 }
 .signup_form > form {

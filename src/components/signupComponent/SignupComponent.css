@@ -34,6 +34,7 @@
 }
 .signup_form_btn > button:hover{
     background-color: #f6f3f3;
+    border: 1px solid red;
     color: black;
     outline: none;
 

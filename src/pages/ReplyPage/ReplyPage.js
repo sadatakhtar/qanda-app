@@ -21,7 +21,7 @@ function ReplyPage() {
 
                 </div>
                 <div className="reply_textarea_container">
-                    <TextareaComponent />
+                    <TextareaComponent subtitle="Title of the question" description="Enter your reply here..."/>
                 </div>
                
                 

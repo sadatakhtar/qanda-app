@@ -1,0 +1,36 @@
+.selected_titleandbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected_title{
+    width: 65%;
+    text-align: left; 
+}
+
+.selected_title > h2 {
+    font-weight: 400;
+}
+
+.selected_title_btn{
+    width: 15%; 
+}
+
+.selected_title_btn > button {
+    background-color: #D12F2F;
+    border: 1px solid red;
+    border-radius: 4px;
+    color: white;
+}
+
+.selected_title_btn > button:hover {
+    background-color: #f6f3f3;
+    border: 1px solid red;
+    color: black;
+}
+
+.selected_textarea{
+    width: 80%;
+    margin: auto;
+}

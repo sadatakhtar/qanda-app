@@ -1,6 +1,7 @@
 .textarea_form_btn > button{
     background-color: #D12F2F;
     border: 1px solid red;
+    border-radius: 4px;
     width: 70px;
     color: antiquewhite;
 }

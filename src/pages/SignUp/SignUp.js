@@ -8,9 +8,7 @@ function SignUp() {
 
     return (
         <div className="signup_container">
-          <SignupComponent />
-         
-            
+          <SignupComponent />    
         </div>
     )
 }

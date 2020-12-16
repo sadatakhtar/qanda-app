@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
+import Axios from 'axios';
 import './SignupComponent.css';
+import { useHistory } from 'react-router-dom';
+
 
 function SignupComponent() {
 
@@ -9,12 +12,25 @@ function SignupComponent() {
     const [email, setEmail] = useState("");
     const [role, setRole] = useState("");
 
+    const history = useHistory();
+
+    const register = () => {
+        Axios.post('http://localhost:3003/register', {
+            username: name, 
+            password: password,
+            email: email
+        }).then((response) => {
+            console.log(response);
+        })
+
+    };
+
     const details = {
-        name, 
-        password,
-        confirm,
-        email,
-        role
+       username: name, 
+        password: password,
+        confirm: confirm,
+        email: email
+        // role
     };
 
     const options = {
@@ -42,14 +58,22 @@ function SignupComponent() {
         setRole(e.target.value);
     }
 
+   // https://lowly-foam-badger.glitch.me/creatures
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('https://lowly-foam-badger.glitch.me/creatures', options)
+        fetch('http://localhost:3003/register', options)
         .then(response => {
             return response.json();
         })
         .then(data => {
-            data ? console.log({success: true}) : console.log({success: false});    
+           data ? console.log({success: true}) : console.log({success: false});
+           if(data.success === true){
+            localStorage.setItem("token", JSON.stringify(data)); 
+            history.push('/login');
+           }else{
+            console.log('Registration failed');
+           }
+           
         })
         .catch(e => {
             console.error(e);
@@ -65,12 +89,12 @@ function SignupComponent() {
            <div className="signup_form">
                <form onSubmit={handleSubmit} >
                    <input  name="username" type="text" placeholder="Username"  onChange={handleName} required/>
+                   <input name="email" type="email" placeholder="email" onChange={handleEmail} required/>
                    <input name="password" type="password" placeholder="Password" onChange={handlePassword} required/>
                    <input name="confirm" type="password" placeholder="Confirm password" onChange={handleConfirm} required/>
-                   <input name="email" type="email" placeholder="email" onChange={handleEmail} required/>
-                   <input name="role" type="text" placeholder="Student/Teacher" onChange={handleRole} required/>
+                   {/* <input name="role" type="text" placeholder="Student/Teacher" onChange={handleRole} required/> */}
                    <div className="signup_form_btn">
-                       <button type="submit">Register</button>
+                       <button  type="submit">Register</button>
                    </div>
                </form>
            </div>
@@ -80,4 +104,4 @@ function SignupComponent() {
     )
 }
 
-export default SignupComponent
+export default SignupComponent;

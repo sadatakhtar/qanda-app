@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Redirect } from 'react-router-dom';
 import SignUp from '../pages/SignUp/SignUp';
 import Login from '../pages/Login/Login'
 import ReplyPage from '../pages/ReplyPage/ReplyPage';
@@ -22,6 +22,7 @@ export default () => {
                 <Route path="/answered" component={Answered} />
                 <Route path="/unAnswered" component={UnAnswered} />
                 <Route path="/askquestion" component={AskQuestion} />
+                
             </BrowserRouter>
         </div>
     )

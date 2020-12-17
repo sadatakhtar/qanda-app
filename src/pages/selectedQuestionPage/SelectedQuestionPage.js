@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 import ButtonComponent from '../../components/buttonComponent/ButtonComponent';
 
 function SelectedQuestionPage() {
+
     return (
         <div className="selected_container">
             <div className="selected_titleandbtn">
@@ -13,11 +14,11 @@ function SelectedQuestionPage() {
                     <h2>Title of the question</h2>
                 </div>
                 <div className="selected_title_btn">
-                    <ButtonComponent label="Ask question" />
+                <ButtonComponent label="Ask question" />
                 </div>
             </div>
             <div className="selected_link">
-            <p><Link to="/replypage">Add reply</Link></p>
+            <p><Link to="/login">Add reply</Link></p>
             </div>
             <div className="selected_textarea">
                 <TextareaComponent subtitle="username" description="Question details here..."/>

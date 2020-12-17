@@ -36,12 +36,14 @@ function LoginComponent(props) {
         .then(data => {
             console.log(data);
 
+
             if(data.success === false){
                 //localStorage.setItem("token", JSON.stringify(data)); //stores token in local storage
                 history.push('/signup');
                 
             }else{
                 history.push('/allquestions');
+               
             }  
         })
         .catch(e => {

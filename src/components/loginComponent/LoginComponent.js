@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-//import Axios from 'axios';
 import './LoginComponent.css';
 import { useHistory, Link } from 'react-router-dom';
 
@@ -42,16 +41,7 @@ function LoginComponent(props) {
                 history.push('/signup');
                 
             }else{
-                //console.log('Wrong username/password combination(react)');
                 history.push('/allquestions');
-
-            // if(data.success === true){
-            //     //localStorage.setItem("token", JSON.stringify(data)); //stores token in local storage
-            //     history.push('/allquestions');
-                
-            // }else{
-            //     //console.log('Wrong username/password combination(react)');
-            //     history.push('/signup');
             }  
         })
         .catch(e => {

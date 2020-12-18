@@ -61,7 +61,7 @@ function SignupComponent() {
    // https://lowly-foam-badger.glitch.me/creatures
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3003/register', options)
+        fetch('https://question-mark-api.herokuapp.com/register', options)
         .then(response => {
             return response.json();
         })

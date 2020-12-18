@@ -29,7 +29,7 @@ function LoginComponent(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3003/login', options)
+        fetch('https://question-mark-api.herokuapp.com/login', options)
         .then(response => {
             return response.json();
         })
@@ -37,7 +37,7 @@ function LoginComponent(props) {
             console.log(data);
 
 
-            if(data.success === false){
+            if(!data.success === true){
                 //localStorage.setItem("token", JSON.stringify(data)); //stores token in local storage
                 history.push('/signup');
                 
